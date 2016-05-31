@@ -306,4 +306,14 @@ public class FacebookLoginActivity extends BaseActivity implements
     }
 
 
+    @Override
+    public void onBackPressed() {
+            super.onBackPressed();
+            moveTaskToBack(true);
+            finish();
+            return;
+        }
+
+
+
 }

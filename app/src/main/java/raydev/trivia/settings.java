@@ -26,9 +26,9 @@ public class settings extends AppCompatActivity {
         signout.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 signOut();
-//                Intent mainIntent = new Intent(settings.this, FacebookLoginActivity.class);//after time elapses launch the main activity
-//                startActivity(mainIntent);
-                //finish();
+                Intent mainIntent = new Intent(settings.this, FacebookLoginActivity.class);//after time elapses launch the main activity
+                startActivity(mainIntent);
+                finish();
 
             }
         });
@@ -50,7 +50,9 @@ public class settings extends AppCompatActivity {
     public void signOut() {
         mAuth.signOut();
         LoginManager.getInstance().logOut();
-        finish();
+//        Intent mainIntent = new Intent(settings.this, FacebookLoginActivity.class);//after time elapses launch the main activity
+//                startActivity(mainIntent);
+//        finish();
         //put dialog asking if to sign out and give name of person logged in
         Toast.makeText(settings.this, "Sign out",Toast.LENGTH_SHORT).show();
 
